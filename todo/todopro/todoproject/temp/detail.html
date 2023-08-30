@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+ <div class="shadow card" >
+                    <div class="card-body">
+                        <h5 class="card-title"> {{tk.name}}</h5>
+                         <p class="card-text">{{tk.priority}}</p>
+                         <p class="card-text">{{tk.date}}</p>
+                        <a href="{% url 'todoapp:delete' tk.id %}" class="btn btn-primary">Done</a>
+                        <a href="{% url 'todoapp:update' tk.id %}" class="btn btn-primary">update</a>
+                    </div>
+{% endblock %}
